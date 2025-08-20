@@ -11,11 +11,20 @@ int main() {
     //     cout<<"\n";
     // }
 
-    for( int i = 1; i<4; i++)
+    // for( int i = 1; i<4; i++)
+    // {
+    //     for ( int j = 0; j<3; j++)
+    //     {
+    //         cout<<i<<"      ";
+    //     }
+    //     cout<<"\n";
+    // }
+
+    for (int i =1; i<5; i++)
     {
-        for ( int j = 0; j<3; j++)
+        for(int j =0; j<i; j++)
         {
-            cout<<i<<"      ";
+            cout<<"*    ";
         }
         cout<<"\n";
     }
