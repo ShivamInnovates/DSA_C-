@@ -11,16 +11,16 @@ int main() {
     //     cout<<"\n";
     // }
 
-    int a = 4;
-    while(a > 0){
-        int b = 4;
-        while (b > 0){
-            cout <<"* ";
-            b--;
+    for( int i = 1; i<4; i++)
+    {
+        for ( int j = 0; j<3; j++)
+        {
+            cout<<i<<"      ";
         }
-        a--;
         cout<<"\n";
     }
+
+    
 
     return 0;
 }
