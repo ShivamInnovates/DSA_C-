@@ -20,15 +20,31 @@ int main() {
     //     cout<<"\n";
     // }
 
-    for (int i =1; i<5; i++)
+    // for (int i =1; i<5; i++)
+    // {
+    //     for(int j =0; j<i; j++)
+    //     {
+    //         cout<<i;
+    //     }
+    //     cout<<"\n";
+    // }
+
+    for (int i =4; i>0; i--)
     {
         for(int j =0; j<i; j++)
         {
-            cout<<"*    ";
+            cout<<" ";
         }
-        cout<<"\n";
-    }
 
+        for (int k=5;k>i*2;k--)
+            {
+                cout<<"*";
+            }
+        
+        cout<<"\n";
+        
+    }
+    
     
 
     return 0;
