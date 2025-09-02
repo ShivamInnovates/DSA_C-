@@ -26,7 +26,7 @@ int binarySearch(int arr[], int s, int e, int tar)
 int main()
 {
     int arr[5] = {1,2,3,4,5};
-    int tar = 4; // 1 and 4 is giving wrong answer as -1
+    int tar = 4; 
     int s = 0, e = size(arr)-1;
     int mid = s + ((e-s)/2);
     int ans = binarySearch(arr, s, e, tar);
