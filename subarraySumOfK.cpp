@@ -5,18 +5,18 @@ int main()
 {
     int arr[] = {1,2,3,4,5,1,8};
     int n = size(arr);
-    int k = 6, len =0;
+    int k = 7, len =0, current =0;
+    int sum;
 
     for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            int sum =0;
-            for(int m = i; m<=j; m++){
-                sum+=arr[m];
-            }
+        current = i;
+        sum = 0;
+        for(int j=i;j<n;j++){
+            sum+=arr[current];
             if(sum == k){
-                 len = min(len, j-i+1);
-               
+                 len = max(len, j-i+1);    
         }
+        current++;
     }
 }
  cout<<len;
