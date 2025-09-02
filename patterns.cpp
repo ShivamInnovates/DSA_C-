@@ -36,7 +36,7 @@ int main() {
             cout<<" ";
         }
 
-        for (int k=5;k>i*2;k--)
+        for (int k=5;k>i;k--)
             {
                 cout<<"*";
             }
