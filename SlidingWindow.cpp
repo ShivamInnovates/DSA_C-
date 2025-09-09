@@ -3,29 +3,32 @@ using namespace std;
 
 int main()
 {
-    int arr[7] = {-1,2,3,3,4,5,-1};
-    int sum =0, start =0, end =0, sum1;
+    int arr[7] = {2,5,1,10,10};
+    int sum , max = 0,max1,start,end;
     int n = size(arr);
-    int k = 4;
+    int k = 14;
 
-    for(int i =0; i<=n-k; i++)
-    {   sum1=0;
-        for(int j = i; j<i+k; j++)
+    for(int i =0; i<=n-1; i++)
+    {
+        sum =0;
+        for(int j =i ; j<=n-1; j++)
         {
-            sum1 += arr[j];
-            if(sum<=sum1)
+            sum+=arr[j];
+            max1=j-i+1; 
+            if(sum<=k && max1>max) 
             {
-                sum = sum1;
+                max =max1;
                 start = i;
                 end = j;
             }
         }
-    }
 
-    for(int i = start ; i<=end; i++)
+    }
+    cout<<max<<"\n";
+    for(int i = start ; i<=end ; i++)
     {
         cout<<arr[i]<<"\t";
     }
-    cout<<"\n"<<sum;
+    
     return 0;
 }
