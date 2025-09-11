@@ -3,32 +3,34 @@ using namespace std;
 
 int main()
 {
-    int arr[7] = {2,5,1,10,10};
-    int sum , max = 0,max1,start,end;
+    int arr[] = {2,5,1,10,10};
+    int sum =0, maxLength = 0,r =0, l=0, start =0, end =0;
     int n = size(arr);
     int k = 14;
 
-    for(int i =0; i<=n-1; i++)
+    while(r<n)
     {
-        sum =0;
-        for(int j =i ; j<=n-1; j++)
+        sum+= arr[r];
+
+        while(sum > k && l<=r)
         {
-            sum+=arr[j];
-            max1=j-i+1; 
-            if(sum<=k && max1>max) 
-            {
-                max =max1;
-                start = i;
-                end = j;
-            }
+            sum-= arr[l];
+            l++;
         }
 
+        if(maxLength<r-l+1)
+        {
+            maxLength = r-l+1;
+            start = l;
+            end = r;
+        }
+        r++;
+        
     }
-    cout<<max<<"\n";
-    for(int i = start ; i<=end ; i++)
-    {
-        cout<<arr[i]<<"\t";
-    }
+
+    for(int i = start; i<=end; i++)
+        cout<<arr[i]<<" ";
+    cout<<"\nLength of the subarray: "<<maxLength;
     
     return 0;
 }

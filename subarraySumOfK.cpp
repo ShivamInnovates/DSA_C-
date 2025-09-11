@@ -7,7 +7,7 @@ int main()
     int n = size(arr);
     int k = 7, len =0, current =0;
     int sum;
-
+ 
     for(int i=0;i<n;i++){
         current = i;
         sum = 0;
