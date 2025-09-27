@@ -6,14 +6,14 @@ int main()
     int arr[] = {2,1,4,1,2,1};
     int n = size(arr);
 
-    int hash[5] = {0};
+    map<int, int> mpp ;
     for(int i = 0 ; i<n ; i++)
     {
-        hash[arr[i]]+=1;
+        mpp[arr[i]]+=1;
     }
 
-    int num;
-    cout<<"Enter the number : ";
-    cin>>num;
-    cout<<"Count of "<<num<<" : "<<hash[num];
+    for(auto it : mpp)
+    {
+        cout<<it.first<<"->"<<it.second<<endl;
+    }
 }
