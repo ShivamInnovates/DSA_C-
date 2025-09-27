@@ -3,7 +3,7 @@ using namespace std;
 
 int partition(int arr[], int low, int high)
 {
-    int pivot = arr[low];
+    int pivot = arr[(low + high) / 2];
     int i = low;
     int j = high;
 
