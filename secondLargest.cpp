@@ -6,22 +6,28 @@ int main()
     int arr[]= {1,2,4,7,7,5};
     int n= sizeof(arr)/sizeof(arr[0]);
     
-    int largest= INT_MIN;
-    for (int i = 0; i < n; i++) {
-        if (arr[i] > largest) {
-            largest = arr[i];
-        }
+    int lar = arr[0];
+    int sec = arr[1];
+
+    if(sec > lar){
+        int temp = lar;
+        lar = sec;
+        sec = temp;
     }
 
-    int secondLargest= INT_MIN;
-    for (int i =0; i<n; i++)
+    for(int i = 2; i<n; i++)
     {
-        if(arr[i] >secondLargest && arr[i] != largest)
+        if(arr[i]>lar)
         {
-            secondLargest= arr[i];
+            sec = lar;
+            lar = arr[i];
+        }
+        else if(arr[i]>sec && arr[i]!=lar)
+        {
+            sec = arr[i];
         }
     }
-     cout << "Largest element is: " << largest << "\n"<<"The Second Largest element is :"<<secondLargest;
+     cout << "Largest element is: " << lar << "\n"<<"The Second Largest element is : "<<sec;
     return 0;
 
 }
